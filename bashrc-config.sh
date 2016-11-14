@@ -86,7 +86,13 @@ alias ls='ls -h --color' # ls colour enable
 alias grep='grep --color=auto' # grep colour enable
 alias dfh='df -h' # human readable disk space
 alias back='cd $OLDPWD' # Lazy way back to previous pwd (like cd -) 
-
+alias update="sudo apt-get update"
+alias shutdown="sudo shutdown -h now"
+alias upgrade="sudo apt-get upgrade"
+alias snano="sudo nano"
+alias root="sudo su"
+alias purge="sudo apt-get remove --purge"
+alias clean="sudo apt-get autoclean"
  
 # Spelling / typo error correction
 alias xs='cd'
@@ -96,10 +102,21 @@ alias moew='more'
 alias kk='ll'
 alias ..='cd ..'
 alias cd..='cd ..'
+
+
 #--------------------OTHER
 # Clock - A bash clock that can run in your terminal window.
 clock (){
 while true;do clear;echo "===========";date +"%r";echo "===========";sleep 1;done
+}
+# cp with progress bar
+function cp_p() {
+	if [ `echo "$2" | grep ".*\/$"` ]
+	then
+		pv "$1" > "$2""$1"
+	else
+		pv "$1" > "$2"/"$1"
+	fi
 }
 #--------------------FUNCTIONS
 #

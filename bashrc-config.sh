@@ -93,7 +93,6 @@ alias snano="sudo nano"
 alias root="sudo su"
 alias purge="sudo apt-get remove --purge"
 alias clean="sudo apt-get autoclean"
- 
 # Spelling / typo error correction
 alias xs='cd'
 alias vf='cd'
@@ -102,8 +101,6 @@ alias moew='more'
 alias kk='ll'
 alias ..='cd ..'
 alias cd..='cd ..'
-
-
 #--------------------OTHER
 # Clock - A bash clock that can run in your terminal window.
 clock (){
@@ -162,7 +159,7 @@ function my_ip() # Get IP adress on ethernet.
 #------------------- 
 function ii()   # Get current host related info.
 {
-    echo -e "\nYou are logged on ${BRed}$HOST"
+    echo -e "\nYou are logged on ${BRed}" ; hostname
     echo -e "\n${BRed}Additionnal information:$NC " ; uname -a
     echo -e "\n${BRed}Users logged on:$NC " ; w -hs |
              cut -d " " -f1 | sort | uniq

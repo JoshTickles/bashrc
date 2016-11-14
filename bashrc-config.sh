@@ -83,13 +83,19 @@ NC="\e[m"               # Color Reset
 
 #--------------------ALIASES
 alias ls='ls -h --color' # ls colour enable
+alias grep='grep --color=auto' # grep colour enable
+alias dfh='df -h' # human readable disk space
+alias back='cd $OLDPWD' # Lazy way back to previous pwd (like cd -) 
+
  
-#Spelling error correction
+# Spelling / typo error correction
 alias xs='cd'
 alias vf='cd'
 alias moer='more'
 alias moew='more'
 alias kk='ll'
+alias ..='cd ..'
+alias cd..='cd ..'
 #--------------------FUNCTIONS
 #
 #--------------------

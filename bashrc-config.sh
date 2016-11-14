@@ -96,6 +96,11 @@ alias moew='more'
 alias kk='ll'
 alias ..='cd ..'
 alias cd..='cd ..'
+#--------------------OTHER
+# Clock - A bash clock that can run in your terminal window.
+clock (){
+while true;do clear;echo "===========";date +"%r";echo "===========";sleep 1;done
+}
 #--------------------FUNCTIONS
 #
 #--------------------

@@ -1,10 +1,16 @@
 #!/bin/bash/sh
+#################
+# Requires: Ubuntu distribution - This should work fine on versions 16.04 and below...	
+#  
+# A personal script to add some lovely bits and bobs to my .bashrc file. 
+# This can obviously work for you too but make sure you check the BashRC.txt file and make any changes you require as lots of these are personal to myself. 
+# This is mainly aimed at Ubuntu distributions however soon I will modify a checking system and seperate files based apon said check.
 #
-# Requires Ubuntu distribution - This should work fine on versions 16.04 and below...	
-# 
+# UPDATED - 22/11/2016
+# AURTHOR - Josh (JoshTickles) 
 #
-currentver="0.62"
-currentverdate="1sh July 2016"
+#
+############# 
 
 WhichDistAmI()
 {
@@ -37,10 +43,10 @@ AmIroot()
 	else
 		echo "\nScript running as root. Starting..."
 	fi
-	}
+}
 
 
-WhichUser()
+DoTheThing()
 { 
 	# Ask which user .bashrc to append
  	echo "Please enter your account username: "
@@ -51,8 +57,11 @@ WhichUser()
  	sleep 3
  		save="/home/$Username/.bashrc"
  	echo "" >> $save #Create New line in .bash_aliases
- 	echo ./bashrc.txt >> $save
+ 	echo ./Ubuntu-BashRC.txt >> $save
 	sleep 3
  	echo "Configuration has been added... You must exit your session for these to take effect."
-	
-	}
+}
+#------------------------------------------------ START
+WhichDistAmI
+AmIroot
+DoTheThing

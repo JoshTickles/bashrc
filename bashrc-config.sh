@@ -56,8 +56,8 @@ DoTheThing()
 	echo "Applying configuration to $Username's .bashrc..."
  	sleep 3
  		save="/home/$Username/.bashrc"
- 	echo "" >> $save #Create New line in .bash_aliases
- 	echo ./Ubuntu-BashRC.txt >> $save
+ 	# Use cat to copy out config in a non destructive manor.
+ 	cat ./Ubuntu-BashRC.txt >> $save
 	sleep 3
  	echo "Configuration has been added... You must exit your session for these to take effect."
 }

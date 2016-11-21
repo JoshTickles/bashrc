@@ -53,6 +53,7 @@ alias snano="sudo nano"
 alias root="sudo su"
 alias purge="sudo apt-get remove --purge"
 alias clean="sudo apt-get autoclean"
+alias diskspace="du -S | sort -n -r |more"
 # Spelling / typo error correction
 alias xs='cd'
 alias vf='cd'

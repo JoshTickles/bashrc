@@ -49,13 +49,13 @@ AmIroot()
 DoTheThing()
 { 
 	# Ask which user .bashrc to append
- 	echo "Please enter your account username: "
-		read Username
-	echo "You entered: $Username"
+ 	#echo "Please enter your account username: "
+		#read Username
+	#echo "You entered: $Username"
 	sleep 3
 	echo "Applying configuration to $Username's .bashrc..."
  	sleep 3
- 		save="/home/$Username/.bashrc"
+ 		save="/home/josh/.bashrc"
  	# Use cat to copy out config in a non destructive manor.
  	cat ./Ubuntu-BashRC.txt >> $save
 	sleep 3
